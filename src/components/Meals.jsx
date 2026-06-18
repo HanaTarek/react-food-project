@@ -6,8 +6,8 @@ const requestConfig = {};
 export default function Meals() {
 
   const {data : loadedMeals
-    , isLoading , 
-    error } = useHttp('http://localhost:3000/meals' , requestConfig , []);
+    , isLoading ,
+    error } = useHttp(`${import.meta.env.VITE_API_URL}meals`, requestConfig, []);
 
 
     if(isLoading){

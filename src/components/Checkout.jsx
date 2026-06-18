@@ -22,7 +22,7 @@ export default function Checkout() {
    const{ data,
         error,
         sendRequest,
-        clearData } = useHttp('http://localhost:3000/orders',requestConfig);
+        clearData } = useHttp(`${import.meta.env.VITE_API_URL}/orders`, requestConfig);
 
     const cartTotal = items.reduce((totalPrice, item) => {
         return totalPrice + item.quantity * item.price;
