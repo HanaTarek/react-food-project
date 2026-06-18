@@ -5,7 +5,7 @@ import express from 'express';
 
 const cors = require('cors');
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'https://react-food-project-ebon.vercel.app/' }));
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
