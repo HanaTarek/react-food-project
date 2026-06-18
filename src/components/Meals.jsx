@@ -7,7 +7,7 @@ export default function Meals() {
 
   const {data : loadedMeals
     , isLoading ,
-    error } = useHttp(`${import.meta.env.VITE_API_URL}meals`, requestConfig, []);
+    error } = useHttp(`${import.meta.env.VITE_API_URL}/meals`, requestConfig, []);
 
 
     if(isLoading){
